@@ -4,7 +4,7 @@ Ett säkert krypterings- och designsystem med tre självständiga program byggda
 
 ## 📦 Programmen
 
-### 1. 🔐 rustdatabasen
+### 1. 🔐 AI_databasen
 **Krypterar och dekrypterar känslig data med lösenordsskydd**
 
 #### Funktioner:
@@ -22,7 +22,7 @@ Ett säkert krypterings- och designsystem med tre självständiga program byggda
 
 #### Användning:
 ```bash
-./rustdatabasen
+./AI_databasen
 ```
 
 **I GUI:**
@@ -57,7 +57,7 @@ Ett säkert krypterings- och designsystem med tre självständiga program byggda
 
 ## 🚀 Snabb överblick
 Tre program i samma repository:
-- `rustdatabasen` — huvapp för kryptering, dekryptering och tabellvisning
+- `AI_databasen` — huvapp för kryptering, dekryptering och tabellvisning
 - `aiagent_design` — GUI för att skapa och spara teman (desig.yaml)
 - `bildagent` — enkel bildimport och formattering till `personer`-filen
 
@@ -65,7 +65,7 @@ Nedan listar jag funktioner per program och separerar säkerhetsfunktionerna i e
 
 ## � Funktioner
 
-### rustdatabasen (huvudprogram)
+### AI_databasen (huvudprogram)
 - Läser klartextdata från `personer` och sparar krypterad data i `personer2`
 - Krypterar/dekrypterar med AES-256-GCM
 - Lösenordsverifiering och hantering av flera ID (kategorier) i samma fil
@@ -116,17 +116,17 @@ Varningar / begränsningar:
 
 Körbara program (byggda från denna repo):
 ```
-rustdatabasen          # Huvudprogram
+AI_databasen          # Huvudprogram
 aiagent_design         # Designverktyg
 bildagent              # Bildhantering
 desig.yaml             # Tema-konfiguration
-personer               # Din data (klartext)
-personer2              # Krypterad data (skapas automatiskt)
+personer.bin               # Din data (Krypterad)
+
 ```
 
 För utveckling:
 ```
-AI_databasen.rs        # Huvudkoden (kan heta rustdatabasen i binär)
+AI_databasen.rs        # Huvudkoden (kan heta AI_databasen i binär)
 aiagent_design.rs      # Källkod för aiagent_design
 bildagent.rs           # Källkod för bildagent
 desig.rs               # Delad modul för tema-laddning
@@ -137,14 +137,14 @@ target/                # Kompilerade filer
 ### Automatiskt skapade/backup
 ```
 desig.yaml.bak
-personer2
+
 ```
 
 ## Bygga från källkod
 
 ```bash
 cargo build --release
-cp target/release/AI_databasen .           # eller rustdatabasen beroende på binärnamn
+cp target/release/AI_databasen .           # eller AI_databasen beroende på binärnamn
 cp target/release/aiagent_design .
 cp target/release/bildagent .
 chmod +x AI_databasen aiagent_design bildagent
