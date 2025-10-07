@@ -8,7 +8,7 @@ Ett säkert krypterings- och designsystem med tre självständiga program byggda
 **Krypterar och dekrypterar känslig data med lösenordsskydd**
 
 #### Funktioner:
-- ✅ Läser från `personer` (klartext)
+- ✅ Läser från `filer` (klartext) och bilder konverteras till Base64  och krypteras.
 - ✅ Krypterar med AEAD (AES-256-GCM) + Argon2id key derivation (128MB, 4 iter)
 - ✅ **Lösenordsverifiering** - Hash:en sparas i krypterad data
 - ✅ **Flera kategorier** - Stödjer flera ID:n i samma personer2-fil
@@ -29,7 +29,7 @@ Ett säkert krypterings- och designsystem med tre självständiga program byggda
 1. Fyll i **ID** (identifieringskod, t.ex. "personal", "projekt", "kunder")
 2. Fyll i **Lösenord** 
 3. Klicka **"Kryptera & Kopiera"** 
-   - Läser `personer` → krypterar → lägger till/uppdaterar i `personer2`
+   - Läser `filer` → krypterar → lägger till/uppdaterar i `personer.bin`
    - Flera ID:n kan finnas samtidigt!
 4. Klicka **"Visa"** 
    - Dekrypterar och verifierar lösenord
